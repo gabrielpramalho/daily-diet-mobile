@@ -6,6 +6,7 @@ export const MealItemContainer = styled.TouchableOpacity`
 
   border-radius: 6px;
   padding: 14px 16px;
+  margin-bottom: 8px;
 `
 
 export const Time = styled.Text`
@@ -28,7 +29,7 @@ export const TimeContainer = styled.View`
   border-left-width: 0;
 `
 
-interface FlagProps {
+export interface FlagProps {
   status: 'inside' | 'outside'
 }
 

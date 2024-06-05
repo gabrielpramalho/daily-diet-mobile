@@ -1,17 +1,18 @@
 import { ArrowUpRight } from "phosphor-react-native";
 import { GeneralScoreContainer, Text, ValueScore } from "./styles";
 import { useTheme } from "styled-components/native";
+import { TouchableOpacityProps } from "react-native";
 
 
-interface GeneralScore {
+type GeneralScore = TouchableOpacityProps & {
   isNegative?: boolean
 }
 
-export function GeneralScore({ isNegative = false }: GeneralScore) {
+export function GeneralScore({ isNegative = false, ...props }: GeneralScore) {
   const theme = useTheme()
 
   return (
-    <GeneralScoreContainer isNegative={isNegative}>
+    <GeneralScoreContainer {...props} isNegative={isNegative}>
       <ValueScore>90,86%</ValueScore>
       <Text>das refeições dentro da dieta</Text>
 
